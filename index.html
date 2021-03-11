@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+        </center>
+        <script>
+          var images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8-Yq2mXIRZt_86xMSrUK6eifqIUsH2kBXfw&usqp=CAU", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://www.pinclipart.com/picdir/middle/561-5616837_laughing-young-woman-clipart-eating-with-chopsticks-clipart.png", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv4ib8dX9FbUnk2e7mNpfDrdmCZ8slUktraA&usqp=CAU"];
+            var names = ["Fmaily Book","Daddy", "Mother", "Me", "Grandpa And Grandma"];
+            var i = 0;
+            function update()
+            {
+             i++;
+                var numbers_of_family_member_in_array = 5
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }   
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+
+        </script>
+    </body>
+</html>
